@@ -40,7 +40,7 @@ export default function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    let url = `${REACT_APP_URL}user/register`;
+    let url = `https://confused-gray-bracelet.cyclic.app/user/register`;
     try {
       let res = await axios.post(url, data);
       let ans = res.data;

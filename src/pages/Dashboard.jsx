@@ -37,7 +37,8 @@ function Dashboard() {
               width: "100%",
               height: " calc(100vh - 77px)",
             }}
-            mapStyle={process.env.REACT_APP_URL_KEY}
+            // mapStyle={process.env.REACT_APP_URL_KEY}
+            mapStyle="https://api.maptiler.com/maps/streets/style.json?key=vdoNW1KXk1pqLcleSY8p"
           >
             <Marker longitude={long} latitude={lati} anchor="bottom">
               <GoLocation fontSize={"22px"} />

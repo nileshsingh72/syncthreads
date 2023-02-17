@@ -11,9 +11,8 @@ import axios from "axios";
 export const loginAction = (data) => async (dispatch) => {
   dispatch({ type: loginLoading });
   try {
-    let url = `${REACT_APP_URL}user/signin`;
+    let url = `https://confused-gray-bracelet.cyclic.app/user/signin`;
     let res = await axios.post(url, data);
-    // console.log(res.data, "herer");
     if (res.data.status) {
       dispatch({ type: loginSuccess, payload: res.data });
       localStorage.setItem("token", JSON.stringify(res.data.token));
