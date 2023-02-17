@@ -40,7 +40,7 @@ export default function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    let url = "http://localhost:9000/user/register";
+    let url = `${REACT_APP_URL}user/register`;
     try {
       let res = await axios.post(url, data);
       let ans = res.data;

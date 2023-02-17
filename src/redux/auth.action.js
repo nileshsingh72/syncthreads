@@ -11,7 +11,7 @@ import axios from "axios";
 export const loginAction = (data) => async (dispatch) => {
   dispatch({ type: loginLoading });
   try {
-    let url = "http://localhost:9000/user/signin";
+    let url = `${REACT_APP_URL}user/signin`;
     let res = await axios.post(url, data);
     // console.log(res.data, "herer");
     if (res.data.status) {
